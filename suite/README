@@ -1,0 +1,41 @@
+This is meant to build upon the pyunit unittest introduction by providing
+an example workspace for running multiple tests.
+
+In order to run this, you'll need to verify that the directory in
+which this example is included is exported to the shell or environment.
+For example, if I had downloaded and extracted pyunit_intro.tar.gz to
+my home directory (~), I would use the command:
+
+    export PYTHONPATH=${PYTHONPATH}:~/pyunit_intro/suite/src/
+
+Then I could run the test by changing my working directory to the same
+directory that 'unittest_run_all.py' is in and running the command:
+  
+    python unittest_run_all.py
+
+If successful, you'll see the following printed to the screen:
+
+    Verify that adding negative numbers works ... ok
+    Verify that adding negative numbers works (fail example) ... FAIL
+    Verify that adding positive numbers works ... ok
+    Verify that subtracting negative numbers works ... ok
+    Verify that subtracting positive numbers works ... ok
+    Verify that cos() works ... ok
+    Verify that sin() works ... ok
+    Verify that hello() works ... ok
+    Verify that goodbye() works ... ok
+    
+    ======================================================================
+    FAIL: Verify that adding negative numbers works (fail example)
+    ----------------------------------------------------------------------
+    Traceback (most recent call last):
+      File "/nfs/qa/ceqa/src/dhildreth/pyunit_intro/suite/src/add.py", line 45, in testNegativeAddSkip
+        self.assertEqual(add(-12,23), 10)
+    AssertionError: 11 != 10
+    
+    ----------------------------------------------------------------------
+    Ran 9 tests in 0.001s
+    
+    FAILED (failures=1)
+
+Tested with Python 2.6.5 (r265:79063, Apr 16 2010, 13:09:56) [GCC 4.4.3].

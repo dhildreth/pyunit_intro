@@ -1,0 +1,52 @@
+This project folder is meant to give a nice introduction to pyUnit
+unittest in a "Hello World" fashion, if you will.
+
+There are two main unittest programs:
+   * intro.py  --  This is a very simple test to get started with
+   * unittest_run_all.py -- This is showing how to group files and run all
+
+Here's an overview of all the files and folders included in this project.
+    +- pyunit_intro
+       |- intro.py
+       |- README
+       +- suite
+          |- README
+          +- src
+             |- add.py
+             |- __init__.py
+             |- subtract.py
+             +- text
+                |- goodbye.py
+                |- hello.py
+                |- __init__.py
+             +- trig
+                |- __init__.py
+                |- sincos.py
+          +- test
+             |- unittest_run_all.py
+
+Running intro.py is where I would recommend starting.  Simply run the command:
+
+    python intro.py
+
+If successful, you'll recieve the following output:
+
+    ...
+    ----------------------------------------------------------------------
+    Ran 3 tests in 0.000s
+    
+    OK
+
+This shows that three tests (three dots) were ran successfully.
+
+As far as documentation goes, the source code is the documentation.  If you're
+thirsty for additional knowledge beyond what I've described, I would recommend
+the following resources:
+
+    http://docs.python.org/library/unittest.html
+    http://docs.python.org/tutorial/modules.html
+    http://blip.tv/pycon-us-videos-2009-2010-2011/pycon-2010-introduction-to-unittest-a-k-a-pyunit-96-3379016
+    http://www.youtube.com/watch?v=Hb4lgMvyOOk
+    http://www.thelinuxdaily.com/2011/10/getting-started-with-python-unit-testing-pyunit
+
+Tested with Python 2.6.5 (r265:79063, Apr 16 2010, 13:09:56) [GCC 4.4.3].
